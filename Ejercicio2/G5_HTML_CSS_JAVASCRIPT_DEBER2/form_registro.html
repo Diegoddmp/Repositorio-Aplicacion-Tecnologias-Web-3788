@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Registro</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="document.js" defer></script>
+</head>
+
+<body>
+    <h2>Formulario de Registro</h2>
+    <form id="formEnvio">
+        <fieldset>
+        <legend>Dirección de Envío</legend>
+        <label for="calle">Calle Principal:</label>
+        <input type="text" id="calle" name="calle"><br><br>
+
+        <label for="transversal">Transversal:</label>
+        <input type="text" id="transversal" name="transversal"><br><br>
+
+        <input type="checkbox" id="entregaPropietario" onclick="toggleEnvio()"> Entrega al Propietario<br><br>
+        <input type="checkbox" id="entregaTercero" onclick="toggleEnvio()"> Entrega a un Tercero<br><br>
+
+        <label for="canton">Cantones:</label>
+        <select id="canton" name="canton">
+            <option value="quito">Quito</option>
+            <option value="guayaquil">Guayaquil</option>
+            <option value="cuenca">Cuenca</option>
+        </select><br><br>
+        <button type="button" id="enviarDatos" disabled>ENVIAR DATOS</button>
+    </fieldset>
+    </form>
+
+    <form id="formConfidencial" style="display:none;">
+        <fieldset>
+        <legend>Información Confidencial</legend>
+        <label for="codigo-postal">Código Postal:</label>
+        <input type="text" id="codigo-postal" name="codigo-postal"><br><br>
+
+        <label for="referencia">Referencia de la Dirección:</label>
+        <textarea id="referencia" name="referencia"></textarea><br><br>
+
+        <button type="button">Guardar   </button>
+    </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contacto.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <div id="form-container">
+        <h1>Contacto</h1>
+            <form>
+                <label for="email">Correo Electronico:</label>
+                <input type="email" id="email" name="email" placeholder="usuario@mail.com" required><br><br>
+                <label for="birthdate">Fecha de Nacimiento:</label>
+                <input type="date" id="birthdate" name="birthdate" value="dd/mm/aaaa" required><br><br>
+                <label for="phone">Teléfono:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Teléfono" required><br><br>
+                <input type="submit" value="Enviar">
+            </form>
+    </div>
+    
+    
+    
+      <script>document.querySelector('form').addEventListener('submit', function(event) {
+        event.preventDefault();
+      
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+      
+        const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const phonePattern = /^\d{10}$/;
+      
+        if (!emailPattern.test(email.value)) {
+          alert('Por favor, ingresa un correo electrónico válido.');
+          email.focus();
+          return false;
+        }
+      
+        if (!phonePattern.test(phone.value)) {
+          alert('Por favor, ingresa un teléfono válido (10 dígitos numéricos).');
+          phone.focus();
+          return false;
+        }
+      
+        alert('Formulario enviado correctamente.');
+        return true;
+      });
+      </script>
+</body>
+</html>

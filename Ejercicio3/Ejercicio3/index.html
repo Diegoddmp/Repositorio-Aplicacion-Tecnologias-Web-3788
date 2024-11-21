@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Capítulo 2 - Barra de menú</title>
+		<meta name="description" content="">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+	    <link rel="stylesheet" href="css/bootstrap.min.css">
+	    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="#" class="navbar-brand">GRUPO 05</a>
+				</div>
+				<div class="collapse navbar-collapse" id="ejemplo-5">
+					<ul class="nav navbar-nav">
+						<li><a href="tabla1.html" id="tabla1-link">Tabla 1</a></li>
+						<li><a href="tabla2.html" id="tabla2-link">Tabla 2</a></li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar">
+						</div>
+						<button class="btn btn-primary">Buscar</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Github<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#" target="_blank">Diego Mosquera</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Sebas Martinez</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Juanfer Villamarin</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container" id="tabla-container"></div>
+
+		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="/Modulo 4/Ejercicio3/script.js"></script> 
+	</body>
+</html>

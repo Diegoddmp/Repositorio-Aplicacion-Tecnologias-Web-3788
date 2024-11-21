@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+	<title>Form Product</title>
+	<link rel="stylesheet" href="css/estilo.css">
+
+</head>
+
+
+<body>
+      <form style="margin-left: 50px;" name="FormProducto">
+
+        <fieldset>
+          <legend>Datos basicos</legend>
+          <label>Nombre del Producto:</label>
+          <input type="text" id="nombreProducto" name="nombreProducto" required>
+        
+          <br><br>
+
+          <label>Descripción:</label><br>
+          <textarea id="descripcion" name="descripcion" rows="4" cols="25"></textarea>
+
+          <br><br>
+
+          <label>Foto:</label><br>
+          <input type="file" id="foto" name="foto">
+
+          <br><br>
+
+          <input type="checkbox" id="verificacion" name="verificacion">
+          <label>Añadir información confidencial:</label>
+        </fieldset>
+        <br>
+
+        <fieldset>
+          <legend>Datos Economicos</legend>
+          <label>Precio :</label>
+          <input type="number" id="precio" name="precio" required>
+          <label>Impuesto :</label>
+          <select id="productoCategoria" name="productoCategoria" required>
+            <option value="4">4%</option>
+            <option value="7">7%</option>
+            <option value="9">9%</option>
+            <option value="12">12%</option>
+            <option value="15">15%</option>
+          </select>
+
+          <br><br>
+
+          <label>Promoción :</label><br>
+          <input type="radio" id="html" name="fav_language" value="HTML">
+          <label for="html">Ninguno</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">Transporte gratuito</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">Descuento 5%</label>
+        </fieldset>
+        <br>
+
+        <input type="submit" value="Guardar cambios">
+        <input type="reset" value="Borrar los datos introducidos">
+      </form>
+    
+
+</body>
+
+</html>
