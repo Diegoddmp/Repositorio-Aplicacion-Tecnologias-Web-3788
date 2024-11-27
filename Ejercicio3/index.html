@@ -5,28 +5,47 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<title>Capítulo 2 - Barra de menú</title>
 		<meta name="description" content="">
-	    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	    <link rel="stylesheet" href="css/bootstrap.min.css">
-	    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	    <link rel="stylesheet" href="css/main.css">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	</head>
 	<body>
-		
+		<!-- Modal -->
+		<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="confirmationModalLabel">Confirmación</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						¿Desea continuar?
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+						<button type="button" class="btn btn-primary" id="modal-confirm">Sí</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<nav class="navbar navbar-inverse navbar-fixed-top">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#menu">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 					<a href="#" class="navbar-brand">GRUPO 05</a>
 				</div>
-				<div class="collapse navbar-collapse" id="ejemplo-5">
+				<div class="collapse navbar-collapse" id="menu">
 					<ul class="nav navbar-nav">
-						<li><a href="tabla1.html" id="tabla1-link">Tabla 1</a></li>
-						<li><a href="tabla2.html" id="tabla2-link">Tabla 2</a></li>
+						<li><a href="tabla1.html" class="nav-link" data-target="tabla1.html">Tabla 1</a></li>
+						<li><a href="tabla2.html" class="nav-link" data-target="tabla2.html">Tabla 2</a></li>
 					</ul>
 					<form class="navbar-form navbar-left">
 						<div class="form-group">
@@ -34,25 +53,32 @@
 						</div>
 						<button class="btn btn-primary">Buscar</button>
 					</form>
-					<ul class="nav navbar-nav navbar-right">
-						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Github<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-								<li><a href="#" target="_blank">Diego Mosquera</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Sebas Martinez</a></li>
-								<li class="divider"></li>
-								<li><a href="#">Juanfer Villamarin</a></li>
-							</ul>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</nav>
 
 		<div class="container" id="tabla-container"></div>
 
-		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
-	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-	    <script type="text/javascript" src="/Modulo 4/Ejercicio3/script.js"></script> 
+		<!-- jQuery -->
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<!-- Bootstrap JS -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				let targetUrl = ""; // Guardará la URL de destino
+
+				// Interceptar el clic en los enlaces de "Tabla 1" y "Tabla 2"
+				$(".nav-link").on("click", function (event) {
+					event.preventDefault(); // Evitar la navegación inmediata
+					targetUrl = $(this).data("target"); // Obtener la URL del enlace
+					$("#confirmationModal").modal("show"); // Mostrar el modal
+				});
+
+				// Manejar el clic en "Sí" del modal
+				$("#modal-confirm").on("click", function () {
+					window.location.href = targetUrl; // Redirigir al enlace original
+				});
+			});
+		</script>
 	</body>
 </html>

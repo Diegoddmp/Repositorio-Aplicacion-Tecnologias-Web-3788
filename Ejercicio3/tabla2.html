@@ -1,15 +1,12 @@
 <!DOCTYPE html>	
-<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" <![endif]-->
-<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" <![endif]-->
-<!--[if IE 8]>			<html class="no-js lt-ie9" <![endif]-->
-<!--[if IE 8]><!-->		<html class="no-js"> <!--<![endif]-->
+<html class="no-js">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
-	<title></title>
+	<title>Tabla con Botón Vaciar</title>
 	<meta name="description" content="">
-	<meta namee="viewport" content="width=device-widtg, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -22,21 +19,18 @@
 	<div class="container">
 		<h1>Tabla 2</h1><br>
 
-		
-		<!-- <div class="table"> -->
-			<table class="table table-condensed table-bordered table-striped text-center ">
+		<table class="table table-condensed table-bordered table-striped text-center ">
 			<thead>
-				
 				<tr class="aspecto">
-					<th  class="text-center">#</th>
-					<th  class="text-center" >Nombre</th>
-					<th  class="text-center">Apellido</th>
-					<th  class="text-center">Apellido</th>
-					<th  class="text-center">Twitter</th>
-					<th  class="text-center">Curso</th>
+					<th class="text-center">#</th>
+					<th class="text-center">Nombre</th>
+					<th class="text-center">Apellido</th>
+					<th class="text-center">Apellido</th>
+					<th class="text-center">Twitter</th>
+					<th class="text-center">Curso</th>
 				</tr>
 			</thead>
-			<tbody>
+			<tbody id="tabla-datos">
 				<tr>
 					<td>1</td>
 					<td>Diego</td>
@@ -45,7 +39,7 @@
 					<td>@DiegoVera28</td>
 					<td>Bootstrap 3</td> 
 				</tr>
-				<tr >
+				<tr>
 					<td>2</td>
 					<td>Belen</td>
 					<td>Salazar</td>
@@ -53,7 +47,7 @@
 					<td>@BelenUsaV</td>
 					<td>CSS 3</td> 
 				</tr>
-				<tr >
+				<tr>
 					<td>3</td>
 					<td>Juan</td>
 					<td>Alcer</td>
@@ -77,44 +71,54 @@
 					<td>@DiegoVera28</td>
 					<td>Bootstrap 3</td> 
 				</tr>
-
 				<tr>
-					<td >6</td>
-					<td >Diego</td>
-					<td >Vera</td>
-					<td >Martinez</td>
-					<td >@DiegoVera28</td>
+					<td>6</td>
+					<td>Diego</td>
+					<td>Vera</td>
+					<td>Martinez</td>
+					<td>@DiegoVera28</td>
 					<td>Bootstrap 3</td> 
 				</tr>
 			</tbody>
 		</table>
 
-		<!-- </div> -->
+		<!-- Botón para vaciar datos -->
+		<div class="text-center">
+			<button id="vaciar-tabla" class="btn btn-danger">Vaciar Datos</button>
+		</div>
 
 		<br><br><br>
 
 		<button class="btn btn-warning">Advertencia</button>
 
-			<div class="btn-group">
-				<button class="btn btn-info">Ingresar Datos</button>
-				<button class="btn btn-primary dropdown-toogle" data-toggle="dropdown"><span class="caret"></span>
-				</button>
-				<ul class="dropdown-menu">
-					<li><a href="#">Grupo 1</a></li>
-					<li><a href="#">Grupo 2</a></li>
-					<li><a href="#">Grupo 3</a></li>
-					<li><a href="#">Grupo 4</a></li>
-					<li class="divider"></li>
-					<li><a href="#">Grupo 5</a></li>
-					<li><a href="#">Grupo 6</a></li>
-					<li><a href="#">Grupo 7</a></li>
-					<li><a href="#">Grupo 8</a></li>
-				</ul>
-			</div>
+		<div class="btn-group">
+			<button class="btn btn-info">Ingresar Datos</button>
+			<button class="btn btn-primary dropdown-toogle" data-toggle="dropdown">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">Grupo 1</a></li>
+				<li><a href="#">Grupo 2</a></li>
+				<li><a href="#">Grupo 3</a></li>
+				<li><a href="#">Grupo 4</a></li>
+				<li class="divider"></li>
+				<li><a href="#">Grupo 5</a></li>
+				<li><a href="#">Grupo 6</a></li>
+				<li><a href="#">Grupo 7</a></li>
+				<li><a href="#">Grupo 8</a></li>
+			</ul>
+		</div>
 	</div>
 
-	
-		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
-	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script>
+		// Función para vaciar los datos de la tabla
+		document.getElementById('vaciar-tabla').addEventListener('click', function() {
+			const tabla = document.getElementById('tabla-datos');
+			tabla.innerHTML = ''; // Vacía el contenido del tbody
+			alert('Los datos de la tabla han sido eliminados.');
+		});
+	</script>
 </body>
 </html>

@@ -1,3 +1,20 @@
+$(document).ready(function () {
+    // Interceptar el clic en el enlace "Tabla 1"
+    $("#tabla1-link").on("click", function (event) {
+        event.preventDefault(); // Prevenir la navegación predeterminada
+        $("#tabla1Modal").modal("show"); // Mostrar el modal
+    });
+
+    // Manejar el clic en el botón "Sí" del modal
+    $("#modal-yes").on("click", function () {
+        const url = "tabla1.html"; // URL de la tabla a cargar
+        cargarTabla(url, true); // Llama a la función para cargar la tabla
+
+        $("#tabla1Modal").modal("hide"); // Cerrar el modal
+    });
+});
+
+// Función para cargar una tabla dinámicamente
 function cargarTabla(url, mostrarBotonLimpiar = false) {
     fetch(url)
         .then(response => {
@@ -10,14 +27,14 @@ function cargarTabla(url, mostrarBotonLimpiar = false) {
             const container = document.getElementById("tabla-container");
             container.innerHTML = html;
 
-            
+            // Mostrar el botón "Limpiar" si está habilitado
             if (mostrarBotonLimpiar) {
                 const botonLimpiar = document.createElement("button");
                 botonLimpiar.textContent = "Limpiar";
                 botonLimpiar.className = "btn btn-primary mt-3 d-block mx-auto";
                 botonLimpiar.id = "boton-limpiar";
 
-                
+                // Agregar evento al botón "Limpiar"
                 botonLimpiar.addEventListener("click", () => {
                     const tabla = container.querySelector("table");
                     if (tabla) {
@@ -35,14 +52,3 @@ function cargarTabla(url, mostrarBotonLimpiar = false) {
             console.error("Hubo un problema al cargar la tabla:", error);
         });
 }
-
-
-document.getElementById("tabla1-link").addEventListener("click", (event) => {
-    event.preventDefault();
-    cargarTabla("tabla1.html", true);
-});
-
-document.getElementById("tabla2-link").addEventListener("click", (event) => {
-    event.preventDefault();
-    cargarTabla("tabla2.html");
-});

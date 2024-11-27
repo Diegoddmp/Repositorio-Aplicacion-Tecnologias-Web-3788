@@ -1,0 +1,184 @@
+<!DOCTYPE html>	
+<!--[if lt IE 7]>		<html class="no-js lt-ie9 lt-ie8 lt-ie7" <![endif]-->
+<!--[if IE 7]>			<html class="no-js lt-ie9 lt-ie8" <![endif]-->
+<!--[if IE 8]>			<html class="no-js lt-ie9" <![endif]-->
+<!--[if IE 8]><!-->		<html class="no-js"> <!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE-edge, chrome=1">
+	<title></title>
+	<meta name="description" content="">
+	<meta namee="viewport" content="width=device-widtg, initial-scale=1">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/icomoon.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand">GRUPO 06</a>
+				</div>
+				<div class="collapse navbar-collapse" id="ejemplo-5">
+					<ul class="nav navbar-nav">
+						<li><a href="tabla1.html" id="tabla1-link">Tabla 1</a></li>
+						<li><a href="tabla2.html" id="tabla2-link">Tabla 2</a></li>
+					</ul>
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Buscar">
+						</div>
+						<button class="btn btn-primary">Buscar</button>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Github<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Diego Mosquera</a></li>
+								<li class="divider"></li>
+								<li><a href="https://sebastianqp.github.io/3788_sdquinga2/" target="_blank">Sebastian Quinga</a></li>
+								<li class="divider"></li>
+								<li><a href="#">Rafael Vieira</a></li>
+								<li class="divider"></li>
+								<li><a href="https://rafaelvieirav.github.io/Ejercicio02/">Formulario</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container" id="tabla-container"></div>
+
+		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	    <script type="text/javascript" src="/Modulo 4/Ejercicio3/script.js"></script> 
+		<h1>Tabla 2</h1><br>
+
+		
+		<!-- <div class="table"> -->
+			<table class="table table-condensed table-bordered text-center" id="tabla">
+			<thead>
+				
+				<tr style="background-color: black; color: white;" class="aspecto">
+					<th  class="text-center">#</th>
+					<th  class="text-center" >Nombre</th>
+					<th  class="text-center">Apellido</th>
+					<th  class="text-center">Apellido</th>
+					<th  class="text-center">Twitter</th>
+					<th  class="text-center">Curso</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+				<tr >
+					<td>2</td>
+					<td>Mayra</td>
+					<td>Villanueva</td>
+					<td>Ruiz</td>
+					<td>@MayraUsaV</td>
+					<td>CSS 3</td> 
+				</tr>
+				<tr >
+					<td>3</td>
+					<td>Julio</td>
+					<td>Grados</td>
+					<td>Caballero</td>
+					<td>@JuGra07</td>
+					<td>JavaScript</td> 
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+				<tr>
+					<td>5</td>
+					<td>Irvin</td>
+					<td>Ortiz</td>
+					<td>Vega</td>
+					<td>@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+
+				<tr>
+					<td >6</td>
+					<td >Irvin</td>
+					<td >Ortiz</td>
+					<td >Vega</td>
+					<td >@IrvinOrtiz28</td>
+					<td>Bootstrap 3</td> 
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- </div> -->
+
+		<br><br><br>
+
+		<button class="btn btn-warning">Advertencia</button>
+		<button id="limpiar-btn" class="btn btn-danger">Limpiar</button>
+	</div>	
+		<script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+	 <!-- Modal -->
+	 <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Desea continuar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="si-btn">Sí</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+	<script type="text/javascript" src="js/script.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Mostrar el modal al hacer clic en "Tabla 1"
+            $('#tabla1-link').on('click', function (e) {
+                e.preventDefault(); // Previene el comportamiento por defecto
+                $('#confirmationModal').modal('show');
+            });
+
+            // Mostrar la tabla al hacer clic en "Sí"
+            $('#si-btn').on('click', function () {
+                $('#confirmationModal').modal('hide'); // Cierra el modal
+                $('#tabla1').fadeIn(); // Muestra la tabla
+				window.location.href = "tabla1.html";
+            });
+        });
+    </script>
+</body>
+</html>

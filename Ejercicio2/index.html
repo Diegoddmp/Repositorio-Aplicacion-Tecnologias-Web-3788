@@ -1,186 +1,94 @@
-﻿<!DOCTYPE html>
-<html>
-  <head>
-    <title>Home</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
-    <link href="resources/css/axure_rp_page.css" type="text/css" rel="stylesheet"/>
-    <link href="data/styles.css" type="text/css" rel="stylesheet"/>
-    <link href="files/home/styles.css" type="text/css" rel="stylesheet"/>
-    <script src="resources/scripts/jquery-3.2.1.min.js"></script>
-    <script src="resources/scripts/axure/axQuery.js"></script>
-    <script src="resources/scripts/axure/globals.js"></script>
-    <script src="resources/scripts/axutils.js"></script>
-    <script src="resources/scripts/axure/annotation.js"></script>
-    <script src="resources/scripts/axure/axQuery.std.js"></script>
-    <script src="resources/scripts/axure/doc.js"></script>
-    <script src="resources/scripts/messagecenter.js"></script>
-    <script src="resources/scripts/axure/events.js"></script>
-    <script src="resources/scripts/axure/recording.js"></script>
-    <script src="resources/scripts/axure/action.js"></script>
-    <script src="resources/scripts/axure/expr.js"></script>
-    <script src="resources/scripts/axure/geometry.js"></script>
-    <script src="resources/scripts/axure/flyout.js"></script>
-    <script src="resources/scripts/axure/model.js"></script>
-    <script src="resources/scripts/axure/repeater.js"></script>
-    <script src="resources/scripts/axure/sto.js"></script>
-    <script src="resources/scripts/axure/utils.temp.js"></script>
-    <script src="resources/scripts/axure/variables.js"></script>
-    <script src="resources/scripts/axure/drag.js"></script>
-    <script src="resources/scripts/axure/move.js"></script>
-    <script src="resources/scripts/axure/visibility.js"></script>
-    <script src="resources/scripts/axure/style.js"></script>
-    <script src="resources/scripts/axure/adaptive.js"></script>
-    <script src="resources/scripts/axure/tree.js"></script>
-    <script src="resources/scripts/axure/init.temp.js"></script>
-    <script src="resources/scripts/axure/legacy.js"></script>
-    <script src="resources/scripts/axure/viewer.js"></script>
-    <script src="resources/scripts/axure/math.js"></script>
-    <script src="resources/scripts/axure/jquery.nicescroll.min.js"></script>
-    <script src="data/document.js"></script>
-    <script src="files/home/data.js"></script>
-    <script type="text/javascript">
-      $axure.utils.getTransparentGifPath = function() { return 'resources/images/transparent.gif'; };
-      $axure.utils.getOtherPath = function() { return 'resources/Other.html'; };
-      $axure.utils.getReloadPath = function() { return 'resources/reload.html'; };
-    </script>
-  </head>
-  <body>
-    <div id="base" class="">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Capítulo 2 - Barra de menú</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Unnamed (Rectangle) -->
-      <div id="u0" class="ax_default box_2">
-        <div id="u0_div" class=""></div>
-        <div id="u0_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target="#ejemplo-5">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="index.html" class="navbar-brand">GRUPO 06</a>
+            </div>
+            <div class="collapse navbar-collapse" id="ejemplo-5">
+                <ul class="nav navbar-nav">
+                    <li><a href="tabla1.html" id="tabla1-link">Tabla 1</a></li>
+                    <li><a href="tabla2.html" id="tabla2-link">Tabla 2</a></li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Buscar">
+                    </div>
+                    <button class="btn btn-primary">Buscar</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Github<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Diego Mosquera</a></li>
+                            <li class="divider"></li>
+                            <li><a href="https://sebastianqp.github.io/3788_sdquinga2/" target="_blank">Sebastian Quinga</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Rafael Vieira</a></li>
+							<li class="divider"></li>
+							<li><a href="https://rafaelvieirav.github.io/Ejercicio02/">Formulario</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </nav>
 
-      <!-- Unnamed (Image) -->
-      <div id="u1" class="ax_default image">
-        <img id="u1_img" class="img " src="images/home/u1.png"/>
-        <div id="u1_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Desea continuar?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="si-btn">Sí</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u2" class="ax_default box_2">
-        <div id="u2_div" class=""></div>
-        <div id="u2_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u3" class="ax_default link_button">
-        <div id="u3_div" class=""></div>
-        <div id="u3_text" class="text ">
-          <a href="form_registro.html" style="text-decoration: underline;">Formulario Registro</a>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u4" class="ax_default link_button">
-        <div id="u4_div" class=""></div>
-        <div id="u4_text" class="text ">
-          <a href="form_producto.html" style="text-decoration: underline;">Formulario Producto</a>        
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u5" class="ax_default link_button">
-        <div id="u5_div" class=""></div>
-        <div id="u5_text" class="text ">
-          <p><span style="text-decoration:underline ;">Matrículas</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u6" class="ax_default box_2">
-        <div id="u6_div" class=""></div>
-        <div id="u6_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u7" class="ax_default button">
-        <div id="u7_div" class=""></div>
-        <div id="u7_text" class="text ">
-          <a href="FormLoginAvanzado/loginAvanzado.html" style="text-decoration: none;">LOGIN</a>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u8" class="ax_default button">
-        <div id="u8_div" class=""></div>
-        <div id="u8_text" class="text ">
-          <p><span>MATRÍCULA</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u9" class="ax_default box_1">
-        <div id="u9_div" class=""></div>
-        <div id="u9_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u10" class="ax_default label">
-        <div id="u10_div" class=""></div>
-        <div id="u10_text" class="text ">
-          <p><span>Aplicación de Tecnologías WEB</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u11" class="ax_default label">
-        <div id="u11_div" class=""></div>
-        <div id="u11_text" class="text ">
-          <p><span>Estudiante: ___________</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u12" class="ax_default label">
-        <div id="u12_div" class=""></div>
-        <div id="u12_text" class="text ">
-          <p><span>NRC: ______</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u13" class="ax_default label">
-        <div id="u13_div" class=""></div>
-        <div id="u13_text" class="text ">
-          <p><span>Fecha: 23/05/2024</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u14" class="ax_default box_2">
-        <div id="u14_div" class=""></div>
-        <div id="u14_text" class="text " style="display:none; visibility: hidden">
-          <p></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Rectangle) -->
-      <div id="u15" class="ax_default link_button">
-        <div id="u15_div" class=""></div>
-        <div id="u15_text" class="text ">
-          <p><span style="text-decoration:underline ;">Contacto PARTE III</span></p>
-        </div>
-      </div>
-
-      <!-- Unnamed (Inline Frame) -->
-      <div id="u16" class="ax_default">
-        <iframe id="u16_input" scrolling="no" frameborder="1" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
     </div>
-    <script src="resources/scripts/axure/ios.js"></script>
-  </body>
+	<script type="text/javascript" src="js/vendor/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Mostrar el modal al hacer clic en "Tabla 1"
+            $('#tabla1-link').on('click', function (e) {
+                e.preventDefault(); // Previene el comportamiento por defecto
+                $('#confirmationModal').modal('show');
+            });
+
+            // Mostrar la tabla al hacer clic en "Sí"
+            $('#si-btn').on('click', function () {
+                $('#confirmationModal').modal('hide'); // Cierra el modal
+                $('#tabla1').fadeIn(); // Muestra la tabla
+				window.location.href = "tabla1.html";
+            });
+        });
+    </script>
+</body>
 </html>
